@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MITS INTERNSHIPS</title>
+    <link rel="shortcut icon" href="https://mits.ac.in/images/mits-favicon.png" type="image/x-icon">
+
+    <style>
+        /* Style for the page */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(0.25turn, #3f87a6, #c3f49e, #f69d3c);
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            padding: 20px;
+            position: relative;
+            text-align: left;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .button-container button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        img#logo {
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 100px;
+            height: 100px;
+            text-align: left;
+            border-radius: 35%;
+        }
+
+        .text-container p {
+            color: rgb(0, 0, 0);
+            line-height: 1.5;
+        }
+
+        img#right-image {
+            position: absolute;
+            top: 30%;
+            right: 0;
+            left: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .button-container {
+                position: static;
+                text-align: left;
+                margin-top: 10px;
+                margin-right: 10px;
+                bottom: auto;
+            }
+
+            .button {
+                margin-left: 5px;
+            }
+
+            img#right-image {
+                position: static;
+                margin-top: 20px;
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+
+            #profile-button {
+                position: absolute;
+                top: 20px;
+                right: 150px;
+                width: 50px;
+                height: 50px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 18px;
+            }
+        }
+
+        /* Add styles for the logout button */
+        #logout-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #logout-button:hover {
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+
+<body>
+  <img id="logo" src="Images/mitslogo.png" alt="MITS Logo">
+    <div class="container">
+        
+        <div class="text-container">
+            <h1>Welcome To MITS</h1>
+            <p>
+                Madanapalle Institute of Technology & Science is established in 1998 in the picturesque and pleasant
+                environs of Madanapalle and is ideally located on a sprawling 26.17 acre campus on Madanapalle -
+                Anantapur Highway (NH-205) near Angallu, about 10km away from Madanapalle.
+            </p>
+            <p>
+                MITS, originated under the auspices of Ratakonda Ranga Reddy Educational Academy under the proactive
+                leadership of Late Sri. N. Krishna Kumar M.S. (U.S.A), the then President and Dr. N. Vijaya Bhaskar
+                Choudary, Ph.D., Secretary & Correspondent of the Academy.
+            </p>
+            <p>
+                MITS is governed by a progressive management that never rests on laurels and has been striving
+                conscientiously to develop it as one of the best centers of Academic Excellence in India. The
+                Institution's profile is firmly based on strategies and action plans that match changing demands of
+                the nation and the students fraternity. MITS enjoys constant support and patronage of NRI's with
+                distinguished academic traditions and vast experience in Engineering & Technology.
+            </p>
+            <img id="right-image" src="Images/clg_bg.jpg" alt="Right Image">
+        </div>
+
+    </div>
+
+    <div class="button-container">
+        <button id="profile-button" onclick="redirectToProfile()">Profile</button>
+        <button onclick="redirectToOfferLetter()">Offer Letter</button>
+        <button onclick="redirectToCertificateSubmission()">Internship Certificate</button>
+    </div>
+
+    <!-- Logout Button -->
+    <button id="logout-button" onclick="logout()">Logout</button>
+
+    <script>
+        // Button click event handlers
+        function redirectToOfferLetter() {
+            // Redirect the user to the offer letter page
+            window.location.href = "offer_letter.php";
+        }
+
+        function redirectToCertificateSubmission() {
+            // Redirect the user to the certificate submission page
+            window.location.href = "certificate_submission.php";
+        }
+
+        function redirectToProfile() {
+            // Redirect the user to the profile page
+            window.location.href = "profile.php";
+        }
+
+        // Function for logout
+        function logout() {
+            // Implement your logout logic here
+            // For example, redirect the user to the logout page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
